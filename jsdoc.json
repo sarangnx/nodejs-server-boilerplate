@@ -1,0 +1,20 @@
+{
+    "plugins": [
+        "plugins/markdown",
+        "better-docs/category"
+    ],
+    "source": {
+        "include": [
+            "./src"
+        ],
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "opts": {
+        "destination": "./docs/",
+        "encoding": "utf8",
+        "private": true,
+        "recurse": true,
+        "template": "node_modules/better-docs"
+    }
+}

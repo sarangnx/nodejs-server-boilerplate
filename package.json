@@ -1,0 +1,46 @@
+{
+    "name": "nodejs-server-biolerplate",
+    "version": "1.0.0",
+    "main": "bin/www",
+    "scripts": {
+        "dev": "./node_modules/.bin/nodemon ./bin/www",
+        "start": "node ./bin/www",
+        "pm2": "pm2 start ./bin/www --name='evide'",
+        "migrate": "node ./scripts/run migrate",
+        "seed": "node ./scripts/run seed",
+        "doc": "./node_modules/.bin/jsdoc -c jsdoc.json",
+        "apidoc": "./node_modules/.bin/apidoc -i ./src -o ./apidoc",
+        "lint": "./node_modules/.bin/eslint",
+        "test": "./node_modules/.bin/mocha --no-timeouts \"./tests/**/*.test.js\" --exit"
+    },
+    "dependencies": {
+        "app-root-path": "^3.0.0",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.0.0",
+        "express": "^4.17.1",
+        "mysql2": "^1.6.5",
+        "passport": "^0.4.0",
+        "passport-jwt": "^4.0.0",
+        "sequelize": "^5.15.1",
+        "socket.io": "^2.3.0",
+        "winston": "^3.2.1",
+        "yargs": "^13.3.0"
+    },
+    "devDependencies": {
+        "apidoc": "^0.20.1",
+        "better-docs": "^1.4.7",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-prettier": "^3.1.3",
+        "jsdoc": "^3.6.3",
+        "mocha": "^7.1.1",
+        "nodemon": "^1.19.1",
+        "nyc": "^15.0.0",
+        "prettier": "^2.0.5",
+        "sequelize-cli": "^5.5.0",
+        "umzug": "^2.2.0"
+    }
+}
